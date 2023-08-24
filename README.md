@@ -19,3 +19,18 @@
 - 회원 데이터는 자체 DB를 구축할 수 있고, 외부 시스템과 연동할 수 있다.
 
   ![image](https://github.com/DAHEEKIM1/Spring_start/assets/66730012/c4c34fd7-4507-4e3d-8a8f-ad3f3e3acafa)
+
+### 그런데 해당 코드는 MemberRepository에서 
+'''
+private final MemberRepository memberRepository=new MemoryMemberRepository();
+'''
+부분에서 할당하는 부분이 구현체를 의존하는문제가 있다(DIP)
+
+# 주문과 할인 도메인 설계
+## 주문과 할인 정책
+- 회원은 상품을 주문할 수 있다.
+- 회원 등급에 따라 할인 정책을 적용할 수 있다.
+- 할인 정책은 모든 VIP는 1000원을 할인해주는 고정 금액 할인을 적용해달라
+- 할인 정책은 변경 가능성이 높다. 회사의 기본 할인 정책을 아직 정하지 못했고, 오픈 직전까지 미룬다.
+
+- 
