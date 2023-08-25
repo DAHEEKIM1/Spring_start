@@ -33,4 +33,11 @@ private final MemberRepository memberRepository=new MemoryMemberRepository();
 - 할인 정책은 모든 VIP는 1000원을 할인해주는 고정 금액 할인을 적용해달라
 - 할인 정책은 변경 가능성이 높다. 회사의 기본 할인 정책을 아직 정하지 못했고, 오픈 직전까지 미룬다.
 
-- 
+
+## 관심사의 분리
+### AppConfig의 등장
+- 애플리케이션의 전체 동작 방식을 구성(config)라기 위해, " 구현 객체를 생성" 하고, " 연결" 하는 책임을 가지는 별도의 클래스를 만들어 준다.
+- AppConfig는 애플리케이션의 실제 동작에 필요한 " 구현 객체를 생성" 한다.
+- AppConfig는 생성한 객체 인스턴스의 탐조를 " 생성자를 통해서 주입" 해준다.
+- MemberServiceImpl-> MemoryMemberRepository
+- OrderServiceImple-> MemoryMemberRepository, FixDiscountPolicy
