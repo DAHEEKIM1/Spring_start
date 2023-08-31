@@ -105,4 +105,16 @@ private final MemberRepository memberRepository=new MemoryMemberRepository();
 - 기존에는 개발자가 AppConfig를 사용해서 직접 객체를 생성하고 DI를 했지만, 이제부터는 스프링 컨테이너를 통해서 사용한다.
 - 스프링 컨테이너는 Configuration이 붙은 AppConfig를 설정 정보를 사용한다. 여기서 @Bean이라 적힌 메서드를 모두 호출해서 반환된 객체를 스프링 컨테이너에 등록한다. 이렇게 스프링 컨테이너에 등록된 객체를 스프링 빈이라 한다.
 ## 스프링 컨테이너를 사용하면 어떤 장점이 있을까?
+# 섹션 4
+## 스프링 컨테이너 생성
+- ApplicationContext를 스프링 컨테이너라 한다
+- ApplicationContext는 인터페이스이다.
+- 스프링 컨테이너는 XML을 기반으로 만들 수 있고, 애노테이션 기반의 자바 설정 클래스로 만들 수 있다.
+- AppConfig를 사용했던 방식이 애노테이션 기반의 자바 설정 클래스로 스프링 컨테이너를 만든 것이다.
+- ### 참고로 스프링 컨테이너를 부를 때 BeanFactory, ApplicationContext로 구분해서 이야기한다.
+- 
 
+# 스프링 빈 조회
+## 스프링 컨테이너에서 스프링 빈을 찾는 가장 기본적인 조회방법
+- ac.getBean(빈이름, 타입)
+- 
