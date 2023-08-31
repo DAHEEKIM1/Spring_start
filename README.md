@@ -113,3 +113,8 @@ private final MemberRepository memberRepository=new MemoryMemberRepository();
 - AppConfig를 사용했던 방식이 애노테이션 기반의 자바 설정 클래스로 스프링 컨테이너를 만든 것이다.
 - ### 참고로 스프링 컨테이너를 부를 때 BeanFactory, ApplicationContext로 구분해서 이야기한다.
 - 
+
+# 스프링 빈 조회
+## 스프링 컨테이너에서 스프링 빈을 찾는 가장 기본적인 조회방법
+- ac.getBean(빈이름, 타입)
+- 
